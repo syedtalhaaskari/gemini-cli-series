@@ -83,5 +83,50 @@ def tech_edit(text_to_review: str) -> PromptMessage:
     )
 
 
+# Sample animal data
+animals = [
+    {
+        "firstname": "Alex",
+        "species": "Lion",
+        "details": "Alex is a confident and charismatic lion, often seen as the leader of his group.",
+    },
+    {
+        "firstname": "Marty",
+        "species": "Zebra",
+        "details": "Marty is an optimistic and adventurous zebra, always dreaming of the wild.",
+    },
+    {
+        "firstname": "Melman",
+        "species": "Giraffe",
+        "details": "Melman is a hypochondriac giraffe who is always worried about getting sick.",
+    },
+    {
+        "firstname": "Gloria",
+        "species": "Hippopotamus",
+        "details": "Gloria is a sassy, confident, and sweet hippopotamus who is a motherly figure to her friends.",
+    },
+]
+
+
+@mcp.prompt
+def search_animal_by_name(firstname: str) -> PromptMessage:
+    """Searches for an animal by its first name from the list of animals."""
+    prompt_text = f"""
+    You have been provided with a list of animals. Your task is to find the animal with the
+    firstname that matches the one provided.
+
+    Here is the list of animals:
+    ---
+    {animals}
+    ---
+
+    Please find the animal with the firstname: "{firstname}" and return all the details for that animal.
+    If no animal is found, please return a message saying "Animal not found".
+    """
+    return PromptMessage(
+        role="user", content=TextContent(type="text", text=prompt_text)
+    )
+
+
 if __name__ == "main":
     mcp.run(transport="http", port="8080")
