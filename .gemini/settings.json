@@ -1,12 +1,12 @@
 {
    "mcpServers": {
-      "github": {
-         "httpUrl": "https://api.githubcopilot.com/mcp/",
-         "headers": {
-            "Authorization": "$GITHUB_TOKEN"
-         },
-         "timeout": 5000
-      },
+      // "github": {
+      //    "httpUrl": "https://api.githubcopilot.com/mcp/",
+      //    "headers": {
+      //       "Authorization": "$GITHUB_TOKEN"
+      //    },
+      //    "timeout": 5000
+      // },
       // "veo": {
       //    "command": "mcp-veo-go",
       //    "env": {
