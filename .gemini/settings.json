@@ -1,69 +1,72 @@
 {
    "mcpServers": {
-      "github": {
-         "httpUrl": "https://api.githubcopilot.com/mcp/",
-         "headers": {
-            "Authorization": "$GITHUB_TOKEN"
-         },
-         "timeout": 5000
-      },
-      "veo": {
-         "command": "mcp-veo-go",
-         "env": {
-            "MCP_REQUEST_MAX_TOTAL_TIMEOUT": "240000",
-            "MCP_SERVER_REQUEST_TIMEOUT": "30000",
-            "GENMEDIA_BUCKET": "$GOOGLE_CLOUD_STORAGE_BUCKET",
-            "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID"
-         }
-      },
-      "imagen": {
-         "command": "mcp-imagen-go",
-         "env": {
-            "MCP_SERVER_REQUEST_TIMEOUT": "55000",
-            "GENMEDIA_BUCKET": "$GOOGLE_CLOUD_STORAGE_BUCKET",
-            "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID"
-         }
-      },
-      "chirp3-hd": {
-         "command": "mcp-chirp3-go",
-         "env": {
-            "MCP_SERVER_REQUEST_TIMEOUT": "55000",
-            "GENMEDIA_BUCKET": "$GOOGLE_CLOUD_STORAGE_BUCKET",
-            "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID"
-         }
-      },
-      "lyria": {
-         "command": "mcp-lyria-go",
-         "env": {
-            "GENMEDIA_BUCKET": "$GOOGLE_CLOUD_STORAGE_BUCKET",
-            "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID",
-            "MCP_SERVER_REQUEST_TIMEOUT": "55000"
-         }
-      },
-      "avtool": {
-         "command": "mcp-avtool-go",
-         "env": {
-            "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID",
-            "MCP_SERVER_REQUEST_TIMEOUT": "55000"
-         }
-      },
-      // To download the toolbox binary, run the following commands:
-      // For Windows:
-      // set VERSION=0.21.0
-      // curl -o toolbox.exe "https://storage.googleapis.com/genai-toolbox/v%VERSION%/windows/amd64/toolbox.exe"
-      "BigQueryServer": {
-         "command": "../mcp-toolbox/toolbox",
-         "args": [
-            "--prebuilt",
-            "bigquery",
-            "--stdio",
-            "--tools-file",
-            "../mcp-toolbox/tools.yaml",
-            "--stdio"
-         ],
-         "env": {
-            "BIGQUERY_PROJECT": "$GOOGLE_CLOUD_PROJECT_ID"
-         }
-      }
+      // "github": {
+      //    "httpUrl": "https://api.githubcopilot.com/mcp/",
+      //    "headers": {
+      //       "Authorization": "$GITHUB_TOKEN"
+      //    },
+      //    "timeout": 5000
+      // },
+      // "veo": {
+      //    "command": "mcp-veo-go",
+      //    "env": {
+      //       "MCP_REQUEST_MAX_TOTAL_TIMEOUT": "240000",
+      //       "MCP_SERVER_REQUEST_TIMEOUT": "30000",
+      //       "GENMEDIA_BUCKET": "$GOOGLE_CLOUD_STORAGE_BUCKET",
+      //       "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID"
+      //    }
+      // },
+      // "imagen": {
+      //    "command": "mcp-imagen-go",
+      //    "env": {
+      //       "MCP_SERVER_REQUEST_TIMEOUT": "55000",
+      //       "GENMEDIA_BUCKET": "$GOOGLE_CLOUD_STORAGE_BUCKET",
+      //       "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID"
+      //    }
+      // },
+      // "chirp3-hd": {
+      //    "command": "mcp-chirp3-go",
+      //    "env": {
+      //       "MCP_SERVER_REQUEST_TIMEOUT": "55000",
+      //       "GENMEDIA_BUCKET": "$GOOGLE_CLOUD_STORAGE_BUCKET",
+      //       "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID"
+      //    }
+      // },
+      // "lyria": {
+      //    "command": "mcp-lyria-go",
+      //    "env": {
+      //       "GENMEDIA_BUCKET": "$GOOGLE_CLOUD_STORAGE_BUCKET",
+      //       "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID",
+      //       "MCP_SERVER_REQUEST_TIMEOUT": "55000"
+      //    }
+      // },
+      // "avtool": {
+      //    "command": "mcp-avtool-go",
+      //    "env": {
+      //       "PROJECT_ID": "$GOOGLE_CLOUD_PROJECT_ID",
+      //       "MCP_SERVER_REQUEST_TIMEOUT": "55000"
+      //    }
+      // },
+      // // To download the toolbox binary, run the following commands:
+      // // For Windows:
+      // // set VERSION=0.21.0
+      // // curl -o toolbox.exe "https://storage.googleapis.com/genai-toolbox/v%VERSION%/windows/amd64/toolbox.exe"
+      // "BigQueryServer": {
+      //    "command": "../mcp-toolbox/toolbox",
+      //    "args": [
+      //       "--prebuilt",
+      //       "bigquery",
+      //       "--stdio",
+      //       "--tools-file",
+      //       "../mcp-toolbox/tools.yaml",
+      //       "--stdio"
+      //    ],
+      //    "env": {
+      //       "BIGQUERY_PROJECT": "$GOOGLE_CLOUD_PROJECT_ID"
+      //    }
+      // },
+      // "my-mcp-server": {
+      //    "httpUrl": "http://localhost:8080/mcp/"
+      // }
    }
 }
