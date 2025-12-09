@@ -68,5 +68,9 @@
       // "my-mcp-server": {
       //    "httpUrl": "http://localhost:8080/mcp/"
       // }
+   },
+   "telemetry": {
+      "enabled": "true",
+      "target": "gcp"
    }
 }
